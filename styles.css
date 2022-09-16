@@ -21,6 +21,10 @@ a{
   color: var(--color1);
 }
 
+ul{
+  list-style: none;
+}
+
 
 /* CLASS SELECTORS */
 .container{
@@ -51,8 +55,29 @@ a{
   gap: 1rem;
 }
 
+.nav-logo svg{
+  margin-right: 10px;
+  scale: 1.5;
+}
+
+.nav-list svg,
+.nav-settings svg{
+  position: relative;
+  scale: 1.2;
+  margin-right: 10px;
+  top: 5px;
+}
+
+.nav-logo svg{
+  display: inline;
+}
+
 .main-content{
   background-color: var(--color3);
 }
 
 /* ID SELECTORS */
+
+#logo{
+  display: inline;
+}
