@@ -17,7 +17,7 @@
 .container{
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 300px 1fr;
   grid-template-rows: 1fr 4fr;
 }
 
@@ -28,7 +28,18 @@
 
 .sidebar{
   background-color: var(--color2);
+  color: var(--color1);
+  padding: 2rem;
   grid-row: span 3;
+  display: grid;  
+  grid-template-rows: auto auto 1fr;
+  gap: 3rem;
+}
+
+.nav-list ul,
+.nav-settings ul{ 
+  display: grid;
+  gap: 1rem;
 }
 
 .main-content{
