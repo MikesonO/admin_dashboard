@@ -1,0 +1,17 @@
+:root{
+  --color1: #ffffff;
+  --color2: #1992d3;
+  --color3: #e2e8f0;
+}
+
+.header{
+  background-color: var(--color1);
+}
+
+.side-bar{
+  background-color: var(--color2);
+}
+
+.main-content{
+  background-color: var(--color3);
+}
