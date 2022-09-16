@@ -1,17 +1,38 @@
+/* VARIABLES */
 :root{
   --color1: #ffffff;
   --color2: #1992d3;
   --color3: #e2e8f0;
 }
 
-.header{
-  background-color: var(--color1);
+/* ELEMENT SELECTORS */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.side-bar{
+
+/* CLASS SELECTORS */
+.container{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+.header{
+  background-color: var(--color1);
+  grid-column: 2 / span 3;
+}
+
+.sidebar{
   background-color: var(--color2);
+  grid-row: span 3;
 }
 
 .main-content{
   background-color: var(--color3);
 }
+
+/* ID SELECTORS */
