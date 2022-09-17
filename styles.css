@@ -31,7 +31,7 @@ ul{
 .container{
   height: 100vh;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: min-content 1fr;
   grid-template-rows: 150px 4fr;
 }
 
@@ -42,12 +42,44 @@ ul{
 .sidebar{
   background-color: var(--color2);
   color: var(--color1);
+  width: 300px;
   padding: 2rem;
   grid-row: span 3;
   display: grid;  
   grid-template-rows: auto auto 1fr;
   gap: 3rem;
   z-index: 2;
+  transition: all 0.1s ease;
+  align-items: center;
+ 
+}
+
+.sidebar.active{
+  width: 100px;
+}
+
+
+.sidebar.active svg{
+  position: relative;
+  left: 5px;
+}
+
+.sidebar.active ul li svg:hover{
+  scale: 2;
+  transition: 0.25s;
+  backface-visibility: hidden;
+}
+
+.sidebar.active .tooltip{
+  display: block;
+}
+
+.sidebar.active .link-name, 
+.sidebar.active #logo{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0s;
 }
 
 .nav-list ul,
@@ -70,6 +102,11 @@ ul{
   scale: 1.5;
 }
 
+.link-name{
+  transition: all .85s ease;
+}
+
+
 .nav-list svg,
 .nav-settings svg{
   position: relative;
@@ -78,29 +115,22 @@ ul{
   top: 5px;
 }
 
-.nav-logo svg{
-  display: inline;
-}
-
-
 .tooltip{
   position: absolute;
   left: 125px;
   width: 125px;
-  top: 0%;
   font-size: .75rem;
-  transform: translateY(-50%);
+  transform: translate(-60%, -50%);
   height: 2rem;
   line-height: 2rem;
   border-radius: 5px;
   background-color: var(--color1);
   color: var(--color4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   transition: 0s;
   opacity: 0;
   pointer-events: none;
+  display: none;
 }
 
 .sidebar ul li:hover .tooltip{ 
@@ -185,6 +215,8 @@ ul{
 
 #logo{
   display: inline;
+  transition: all .85s ease;
+  position: relative;
 }
 
 #search{
