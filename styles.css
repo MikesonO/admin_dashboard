@@ -35,6 +35,10 @@ ul{
   grid-template-rows: 150px 4fr;
 }
 
+.bold{
+  font-weight: bold;
+}
+
 .sidebar{
   background-color: var(--color2);
   color: var(--color1);
@@ -43,6 +47,7 @@ ul{
   display: grid;  
   grid-template-rows: auto auto 1fr;
   gap: 3rem;
+  z-index: 2;
 }
 
 .nav-list ul,
@@ -76,6 +81,8 @@ ul{
   padding: 0 2rem;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 60px 80px;
+  z-index: 1;
+  box-shadow: 0px -2px 10px 1px var(--color4);
 }
 
 .profile-icon{
@@ -88,6 +95,10 @@ ul{
 
 .big-icon{
   width: 4rem;
+}
+
+.search-container{
+  position: relative;
 }
 
 .profile-container,
@@ -112,12 +123,22 @@ ul{
 .welcome-container{
   display: flex;
   align-items: center;
+  gap: 1rem;
+}
+
+.welcome-greet{
+  font-size: .75rem;
 }
 
 .welcome-container a{
   color: var(--color4);
 }
 
+.welcome-text{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
 
 
 .main-content{
@@ -128,4 +149,24 @@ ul{
 
 #logo{
   display: inline;
+}
+
+#search{
+  min-width: 225px;
+  width: 90%;
+  border-radius: 50px;
+  padding:.5rem 2rem;
+  background-color: var(--color3);
+  border: none;
+}
+
+#search:focus{
+  outline: none;
+}
+
+#search-icon{
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  color: var(--color2);
 }
