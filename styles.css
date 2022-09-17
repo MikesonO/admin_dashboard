@@ -32,7 +32,7 @@ ul{
   height: 100vh;
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 150px 4fr;
 }
 
 .sidebar{
@@ -71,6 +71,11 @@ ul{
 .header{
   background-color: var(--color1);
   grid-column: 2 / span 3;
+  display: grid;
+  align-items: center;
+  padding: 0 2rem;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 60px 80px;
 }
 
 .profile-icon{
@@ -78,17 +83,30 @@ ul{
 }
 
 .small-icon{
-  width: 3rem;
+  width: 2rem;
 }
 
 .big-icon{
-  width: 5rem;
+  width: 4rem;
 }
 
-.profile-container{
+.profile-container,
+.button-container{
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  justify-content: right;
+}
+
+.button-container button{
+  width: 5rem;
+  padding: .5rem 0;
+  border: none;
+  color: var(--color1);
+  background-color: var(--color2);
+  border-radius: 20px;
+  cursor: pointer;
+
 }
 
 .welcome-container{
@@ -99,6 +117,7 @@ ul{
 .welcome-container a{
   color: var(--color4);
 }
+
 
 
 .main-content{
