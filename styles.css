@@ -3,6 +3,7 @@
   --color1: #ffffff;
   --color2: #1992d3;
   --color3: #e2e8f0;
+  --color4: #000000;
 }
 
 /* ELEMENT SELECTORS */
@@ -32,11 +33,6 @@ ul{
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 1fr 4fr;
-}
-
-.header{
-  background-color: var(--color1);
-  grid-column: 2 / span 3;
 }
 
 .sidebar{
@@ -71,6 +67,39 @@ ul{
 .nav-logo svg{
   display: inline;
 }
+
+.header{
+  background-color: var(--color1);
+  grid-column: 2 / span 3;
+}
+
+.profile-icon{
+  border-radius: 50%;
+}
+
+.small-icon{
+  width: 3rem;
+}
+
+.big-icon{
+  width: 5rem;
+}
+
+.profile-container{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.welcome-container{
+  display: flex;
+  align-items: center;
+}
+
+.welcome-container a{
+  color: var(--color4);
+}
+
 
 .main-content{
   background-color: var(--color3);
