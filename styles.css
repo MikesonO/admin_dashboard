@@ -56,6 +56,15 @@ ul{
   gap: 1rem;
 }
 
+.nav-list ul li,
+.nav-settings ul li{
+  position: relative;   
+}
+
+.nav-logo{
+  cursor: pointer;
+}
+
 .nav-logo svg{
   margin-right: 10px;
   scale: 1.5;
@@ -71,6 +80,33 @@ ul{
 
 .nav-logo svg{
   display: inline;
+}
+
+
+.tooltip{
+  position: absolute;
+  left: 125px;
+  width: 125px;
+  top: 0%;
+  font-size: .75rem;
+  transform: translateY(-50%);
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 5px;
+  background-color: var(--color1);
+  color: var(--color4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar ul li:hover .tooltip{ 
+  opacity: 1;
+  transition: all 0.25s ease;
+  top: 50%;
 }
 
 .header{
