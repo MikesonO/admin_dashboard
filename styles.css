@@ -4,6 +4,7 @@
   --color2: #1992d3;
   --color3: #e2e8f0;
   --color4: #000000;
+  --color5: #f0b329;
 }
 
 /* ELEMENT SELECTORS */
@@ -46,12 +47,11 @@ ul{
   padding: 2rem;
   grid-row: span 3;
   display: grid;  
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: 75px 250px 250px;
   gap: 3rem;
   z-index: 2;
   transition: all 0.1s ease;
   align-items: center;
- 
 }
 
 .sidebar.active{
@@ -238,25 +238,56 @@ ul{
 .main-content{
   background-color: var(--color3);
   display: grid;
-  grid-template-columns: minmax(300px, 2fr) minmax(250px, .5fr);;
+  grid-template-columns: minmax(300px, 3fr) minmax(250px, 1fr);;
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
   padding:2rem 1rem;
 }
 
 
-.projects{
+.projects-container{
   grid-row: span 2;
-  background-color: red;
 }
 
-.announcments{
-  background-color: blue;
+.project-cards{
+  display: grid;
+  overflow: auto;
+  grid-template-rows: repeat(3, minmax(10px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding:1rem 1.5rem 1rem 0;
+
+}
+.card{
+  background-color: var(--color1);
+  border-left: 10px solid var(--color5);
+  border-radius: 10px;
+  height: 275px;
 }
 
+.announcments-container,
+.trending-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
 
+}
+
+.announcements,
 .trending{
-  background-color: green;
+  background-color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  height: 25rem;
+  border-radius: 10px;
+
+}
+
+.card,
+.announcements,
+.trending{
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.5);
 }
 
 /* ID SELECTORS */
