@@ -238,10 +238,10 @@ ul{
 .main-content{
   background-color: var(--color3);
   display: grid;
-  grid-template-columns: minmax(300px, 3fr) minmax(250px, 1fr);;
+  grid-template-columns: minmax(300px, 3fr) minmax(250px, 1fr);
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
-  padding:2rem 1rem;
+  padding:2rem 1.5rem;
 }
 
 
@@ -252,17 +252,49 @@ ul{
 .project-cards{
   display: grid;
   overflow: auto;
-  grid-template-rows: repeat(3, minmax(10px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   padding:1rem 1.5rem 1rem 0;
-
 }
+
 .card{
   background-color: var(--color1);
   border-left: 10px solid var(--color5);
   border-radius: 10px;
-  height: 275px;
+  height: fit-content;
+  padding: 1rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  position: relative;
+}
+
+.card img{
+  display: block;
+  border-radius: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.icons svg{
+  scale:1.25;
+  position: absolute;
+  bottom: 1rem;
+  cursor: pointer;
+}
+
+.star{
+  right: 1rem;
+}
+
+.view{
+  left: 1rem;
+}
+.view-code{
+  left: 3.5rem;
 }
 
 .announcments-container,
