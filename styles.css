@@ -46,7 +46,7 @@ ul{
   padding: 2rem;
   grid-row: span 3;
   display: grid;  
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto 1fr 1fr;
   gap: 3rem;
   z-index: 2;
   transition: all 0.1s ease;
@@ -94,12 +94,19 @@ ul{
 }
 
 .nav-logo{
+  position: relative;
   cursor: pointer;
+}
+
+.nav-logo:hover{
+  color: var(--color3);
 }
 
 .nav-logo svg{
   margin-right: 10px;
   scale: 1.5;
+
+  
 }
 
 .link-name{
@@ -155,12 +162,33 @@ ul{
   border-radius: 50%;
 }
 
+
 .small-icon{
   width: 2rem;
 }
 
 .big-icon{
   width: 4rem;
+}
+
+.profile-icon.small-icon,
+.bell{
+  transition: all 0.25s ease;
+}
+
+.profile-icon.small-icon:hover,
+.bell:hover{
+  cursor: pointer;
+  scale: 1.25;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-name: ring;
+}
+
+.animated:hover {
+  animation-iteration-count: infinite;
 }
 
 .search-container{
@@ -171,7 +199,7 @@ ul{
 .button-container{
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
   justify-content: right;
 }
 
@@ -209,14 +237,34 @@ ul{
 
 .main-content{
   background-color: var(--color3);
+  display: grid;
+  grid-template-columns: minmax(300px, 2fr) minmax(250px, .5fr);;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  padding:2rem 1rem;
+}
+
+
+.projects{
+  grid-row: span 2;
+  background-color: red;
+}
+
+.announcments{
+  background-color: blue;
+}
+
+
+.trending{
+  background-color: green;
 }
 
 /* ID SELECTORS */
 
 #logo{
-  display: inline;
-  transition: all .85s ease;
-  position: relative;
+ position: absolute;
+  top: -7.5px;
+  right: 7.5px;
 }
 
 #search{
@@ -238,3 +286,19 @@ ul{
   bottom: 5px;
   color: var(--color2);
 }
+
+
+/* ANIMATIONS */
+
+@keyframes ring {
+  0% { transform: scale3d(1, 1, 1); }
+
+  10%, 20% { transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg); }
+
+  30%, 50%, 70%, 90% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+
+  40%, 60%, 80% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+
+  100% { transform: scale3d(1, 1, 1); }
+}
+
