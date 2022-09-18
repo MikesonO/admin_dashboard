@@ -286,10 +286,24 @@ ul{
   cursor: pointer;
 }
 
-.star{
+.star-off,
+.star-on{
   right: 1rem;
+  color: var(--color5);
 }
 
+.star-off.active{
+  opacity: 0;
+}
+
+.star-on{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.star-on.active{
+  opacity: 1;
+}
 .view{
   left: 1rem;
 }
