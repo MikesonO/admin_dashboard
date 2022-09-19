@@ -1,5 +1,5 @@
 /* VARIABLES */
-:root{
+:root {
   --color1: #ffffff;
   --color2: #1992d3;
   --color3: #e2e8f0;
@@ -8,44 +8,44 @@
 }
 
 /* ELEMENT SELECTORS */
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'Montserrat', sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
 
 /* CLASS SELECTORS */
-.container{
+.container {
   height: 100vh;
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: 150px 4fr;
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
 
-.sidebar{
+.sidebar {
   background-color: var(--color2);
   color: var(--color1);
   width: 300px;
   padding: 2rem;
   grid-row: span 3;
-  display: grid;  
+  display: grid;
   grid-template-rows: 75px 250px 250px;
   gap: 3rem;
   z-index: 2;
@@ -53,28 +53,28 @@ ul{
   align-items: center;
 }
 
-.sidebar.active{
+.sidebar.active {
   width: 100px;
 }
 
 
-.sidebar.active svg{
+.sidebar.active svg {
   position: relative;
   left: 5px;
 }
 
-.sidebar.active ul li a svg:hover{
+.sidebar.active ul li a svg:hover {
   scale: 2;
   transition: 0.25s;
   backface-visibility: hidden;
 }
 
-.sidebar.active .tooltip{
+.sidebar.active .tooltip {
   display: block;
 }
 
-.sidebar.active .link-name, 
-.sidebar.active #logo{
+.sidebar.active .link-name,
+.sidebar.active #logo {
   position: absolute;
   opacity: 0;
   pointer-events: none;
@@ -82,65 +82,65 @@ ul{
 }
 
 .nav-list ul,
-.nav-settings ul{ 
+.nav-settings ul {
   display: grid;
   gap: 1rem;
 }
 
 .nav-list ul li,
-.nav-settings ul li{
-  position: relative;   
+.nav-settings ul li {
+  position: relative;
   cursor: pointer;
-  width:fit-content;
+  width: fit-content;
 }
 
-.nav-link{
+.nav-link {
   color: var(--color1);
 }
 
-.highlight:hover{
+.highlight:hover {
   background-color: var(--color1);
   border-radius: 20px;
   padding: 7.5px;
   color: var(--color2);
 }
 
-.sidebar.active .nav-link.hover{
+.sidebar.active .nav-link.hover {
   pointer-events: none;
 
 }
 
 
-.nav-logo{
+.nav-logo {
   position: relative;
   cursor: pointer;
 }
 
-.nav-logo:hover{
+.nav-logo:hover {
   color: var(--color3);
 }
 
-.nav-logo svg{
+.nav-logo svg {
   margin-right: 10px;
   scale: 1.5;
 
-  
+
 }
 
-.link-name{
+.link-name {
   transition: all .85s ease;
 }
 
 
 .nav-list svg,
-.nav-settings svg{
+.nav-settings svg {
   position: relative;
   scale: 1.2;
   margin-right: 10px;
   top: 5px;
 }
 
-.tooltip{
+.tooltip {
   position: absolute;
   left: 125px;
   width: 125px;
@@ -158,13 +158,13 @@ ul{
   display: none;
 }
 
-.sidebar ul li:hover .tooltip{ 
+.sidebar ul li:hover .tooltip {
   opacity: 1;
   transition: all 0.25s ease;
   top: 50%;
 }
 
-.header{
+.header {
   background-color: var(--color1);
   grid-column: 2 / span 3;
   display: grid;
@@ -176,26 +176,26 @@ ul{
   box-shadow: 0px -2px 10px 1px var(--color4);
 }
 
-.profile-icon{
+.profile-icon {
   border-radius: 50%;
 }
 
 
-.small-icon{
+.small-icon {
   width: 2rem;
 }
 
-.big-icon{
+.big-icon {
   width: 4rem;
 }
 
 .profile-icon.small-icon,
-.bell{
+.bell {
   transition: all 0.25s ease;
 }
 
 .profile-icon.small-icon:hover,
-.bell:hover{
+.bell:hover {
   cursor: pointer;
   scale: 1.25;
 }
@@ -209,19 +209,19 @@ ul{
   animation-iteration-count: infinite;
 }
 
-.search-container{
+.search-container {
   position: relative;
 }
 
 .profile-container,
-.button-container{
+.button-container {
   display: flex;
   align-items: center;
   gap: 1.25rem;
   justify-content: right;
 }
 
-.button-container button{
+.button-container button {
   width: 5rem;
   padding: .5rem 0;
   border: none;
@@ -232,51 +232,51 @@ ul{
 
 }
 
-.welcome-container{
+.welcome-container {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.welcome-greet{
+.welcome-greet {
   font-size: .75rem;
 }
 
-.welcome-container a{
+.welcome-container a {
   color: var(--color4);
 }
 
-.welcome-text{
+.welcome-text {
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
 
 
-.main-content{
+.main-content {
   background-color: var(--color3);
   display: grid;
   grid-template-columns: minmax(300px, 3fr) minmax(250px, 1fr);
   grid-template-rows: min-content 1fr;
   gap: 1rem;
-  padding:2rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 
-.projects-container{
+.projects-container {
   grid-row: span 2;
 }
 
-.project-cards{
+.project-cards {
   display: grid;
   overflow: auto;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
-  padding:1rem 1.5rem 1rem 0;
+  padding: 1rem 1.5rem 1rem 0;
 }
 
-.card{
+.card {
   background-color: var(--color1);
   border-left: 10px solid var(--color5);
   border-radius: 10px;
@@ -290,70 +290,71 @@ ul{
   position: relative;
 }
 
-.card img{
+.card img {
   display: block;
   border-radius: 1rem;
   margin: 0 auto;
   width: 100%;
   max-width: 600px;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
-.icons svg{
-  scale:1.25;
+.icons svg {
+  scale: 1.25;
   position: absolute;
   bottom: 1rem;
-  transition: all .2s ease-in-out; 
+  transition: all .2s ease-in-out;
 }
 
-.icons a{
+.icons a {
   color: var(--color2);
 }
 
-.icons svg:hover{
+.icons svg:hover {
   transform: scale(1.25);
 }
 
 .star-off,
-.star-on{
+.star-on {
   right: 1rem;
   color: var(--color5);
   cursor: pointer;
 }
 
-.star-off.active{
+.star-off.active {
   opacity: 0;
 }
 
-.star-on{
+.star-on {
   opacity: 0;
   pointer-events: none;
 }
 
-.star-on.active{
+.star-on.active {
   opacity: 1;
 }
 
-.view-code{
+.view-code {
   left: 1rem;
 }
-.view-project{
+
+.view-project {
   left: 3.5rem;
 }
 
 
 
 .announcments-container,
-.trending-container{
+.trending-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  
+
 
 }
 
 .announcements,
-.trending{
+.trending {
   background-color: var(--color1);
   display: flex;
   flex-direction: column;
@@ -364,50 +365,131 @@ ul{
 
 .card,
 .announcements,
-.trending{
-  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.5);
+.trending {
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 /* ID SELECTORS */
 
-#logo{
- position: absolute;
+#logo {
+  position: absolute;
   top: -7.5px;
   right: 7.5px;
 }
 
-#search{
+#search {
   min-width: 225px;
   width: 90%;
   border-radius: 50px;
-  padding:.5rem 2rem;
+  padding: .5rem 2rem;
   background-color: var(--color3);
   border: none;
 }
 
-#search:focus{
+#search:focus {
   outline: none;
 }
 
-#search-icon{
+#search-icon {
   position: absolute;
   left: 5px;
   bottom: 5px;
   color: var(--color2);
 }
 
+/* MEDIA QUERY */
+@media only screen and (max-width: 780px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media only screen and (max-width: 650px) {
+  * {
+    transition: all 1s ease;
+  }
+
+  .button-container {
+    gap: .5rem;
+  }
+
+  .button-container button {
+    width: 4rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 572px) {
+  * {
+    transition: all 1s ease;
+  }
+
+  .container {
+    grid-template-rows: 200px 4fr;
+  }
+
+  .header {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: relative;
+  }
+
+  .search-container {
+    position: relative;
+    right: 5rem;
+  }
+
+  .profile-container {
+    position: absolute;
+    right: 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .announcments-container,
+  .trending-container{
+    width: 350px;
+  }
+
+}
+
+
+
+
 
 /* ANIMATIONS */
 
 @keyframes ring {
-  0% { transform: scale3d(1, 1, 1); }
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
 
-  10%, 20% { transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg); }
+  10%,
+  20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
 
-  30%, 50%, 70%, 90% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
 
-  40%, 60%, 80% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
 
-  100% { transform: scale3d(1, 1, 1); }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
 }
-

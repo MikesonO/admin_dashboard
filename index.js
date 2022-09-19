@@ -34,6 +34,11 @@ for (let i = 0; i < starOff.length; i++) {
 
 
 function handleSidebarToggle(){
+  if (sidebarMediaQuery.matches) {
+    sidebar.classList.add("active");
+  } else {
+    sidebar.classList.remove("active");
+  }
   window.addEventListener("resize",()=>{
   if (sidebarMediaQuery.matches) {
     sidebar.classList.add("active");
