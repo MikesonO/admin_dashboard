@@ -318,6 +318,7 @@ ul{
 .star-on{
   right: 1rem;
   color: var(--color5);
+  cursor: pointer;
 }
 
 .star-off.active{
