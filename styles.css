@@ -300,7 +300,7 @@ ul {
 }
 
 .card p{
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 .icons svg {
@@ -391,6 +391,24 @@ ul {
   font-size: .95rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--color2);
+}
+
+.footer{
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 1rem;
+}
+
+.footer a{
+  color:var(--color2)
+}
+
+.footer p svg{
+  position: absolute;
+  bottom: 0;
 }
 
 /* ID SELECTORS */
