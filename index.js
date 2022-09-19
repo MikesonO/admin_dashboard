@@ -3,7 +3,7 @@ const sidebar = document.querySelector(".sidebar");
 const starOff = document.querySelectorAll(".star-off");
 const starOn = document.querySelectorAll(".star-on");
 const navHighlight = document.querySelectorAll(".nav-link");
-
+const sidebarMediaQuery = window.matchMedia("(max-width: 980px)");
 
 
 logoBtn.onclick = () => {
@@ -30,3 +30,18 @@ for (let i = 0; i < starOff.length; i++) {
     }
   })
 };
+
+
+
+function handleSidebarToggle(){
+  window.addEventListener("resize",()=>{
+  if (sidebarMediaQuery.matches) {
+    sidebar.classList.add("active");
+  } else {
+    sidebar.classList.remove("active");
+  }
+})
+
+}
+
+handleSidebarToggle();
