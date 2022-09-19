@@ -5,6 +5,7 @@
   --color3: #e2e8f0;
   --color4: #000000;
   --color5: #f0b329;
+  --color6: #126896;
 }
 
 /* ELEMENT SELECTORS */
@@ -229,7 +230,11 @@ ul {
   background-color: var(--color2);
   border-radius: 20px;
   cursor: pointer;
+  transition: 0.25s;
+}
 
+.button-container button:hover{
+  background-color: var(--color6);
 }
 
 .welcome-container {
@@ -250,6 +255,14 @@ ul {
   display: flex;
   flex-direction: column;
   gap: .5rem;
+}
+
+.welcome-name.bold a{
+  color: var(--color2);
+}
+
+.welcome-name.bold a:hover{
+  color: var(--color6)
 }
 
 
@@ -315,6 +328,7 @@ ul {
 }
 
 .icons svg:hover {
+  color: var(--color6);
   transform: scale(1.25);
 }
 
@@ -378,6 +392,11 @@ ul {
 .about-me span,
 .announcements span{
   color: var(--color2);
+}
+
+.about-me a span:hover,
+.announcements a span:hover{
+  color:var(--color6);
 }
 
 .card,
