@@ -327,7 +327,8 @@ ul {
   color: var(--color2);
 }
 
-.icons svg:hover {
+.view-code:hover,
+.view-project:hover {
   color: var(--color6);
   transform: scale(1.25);
 }
@@ -337,6 +338,12 @@ ul {
   right: 1rem;
   color: var(--color5);
   cursor: pointer;
+}
+
+.star-off:hover,
+.star-on:hover{
+  color: var(--color5);
+  transform: scale(1.25);
 }
 
 .star-off.active {
